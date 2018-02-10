@@ -5,6 +5,20 @@ import RangeSlider from './RangeSlider';
 
 
 export default class EndorsementCard extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+             Adaptable: 'adaptable' ,
+             Collaborative: "collaborative",
+             Communicative: "communicative",
+             Diplomatic: "diplomatic",
+             Empathetic: "empathetic",
+             Inclusive: "inclusive",
+             Listening: "good at listening",
+             Reliable: "reliable"
+            };
+      }
+
     render() {
         return (
             <div>
@@ -12,7 +26,7 @@ export default class EndorsementCard extends React.Component {
                     <Segment>
                         <div className="flex-container-center">
                             <Header as='h1'>Endorsements</Header>
-                            <p className="endorsement-question">How <strong>reliable</strong> is Harriet?</p>
+                            <p className="endorsement-question">How <strong>{this.state.Listening}</strong> is Harriet?</p>
                             <RangeSlider/> 
                         </div>
                         <div className="flex-container-right">
