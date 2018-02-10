@@ -1,3 +1,10 @@
 .card-center {
-    margin-top: 200px;
+    margin-top: 150px;
+}
+
+.flex-container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
