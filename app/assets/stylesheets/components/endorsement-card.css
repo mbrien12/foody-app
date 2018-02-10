@@ -7,4 +7,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 100px;
+}
+
+.flex-container-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
