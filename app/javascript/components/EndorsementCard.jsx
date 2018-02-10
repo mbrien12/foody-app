@@ -8,14 +8,14 @@ export default class EndorsementCard extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-             Adaptable: 'adaptable' ,
-             Collaborative: "collaborative",
-             Communicative: "communicative",
-             Diplomatic: "diplomatic",
-             Empathetic: "empathetic",
-             Inclusive: "inclusive",
-             Listening: "good at listening",
-             Reliable: "reliable"
+             Adaptable: {},
+             Collaborative: {},
+             Communicative: {},
+             Diplomatic: {},
+             Empathetic: {},
+             Inclusive: {},
+             Listening: {},
+             Reliable: {}
             };
     
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,7 +34,7 @@ export default class EndorsementCard extends React.Component {
                     <Segment>
                         <div className="flex-container-center">
                             <Header as='h1'>Endorsements</Header>
-                            <p className="endorsement-question">On a scale of 1-10, how <strong>{behaviour[0]}</strong> is Harriet?</p>
+                            <p className="endorsement-question">On a scale of 1-10, how <strong>{behaviour[1]}</strong> is Harriet?</p>
                             <RangeSlider/> 
                         </div>
                             <div className="flex-container-right">
