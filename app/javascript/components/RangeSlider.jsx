@@ -5,9 +5,6 @@ import ReactDOM from 'react-dom';
 import Slider from 'react-rangeslider' 
 // https://github.com/whoisandy/react-rangeslider
 
-
-
-
 export default class RangeSlider extends React.Component {
     constructor (props, context) {
         super(props, context)
@@ -15,21 +12,13 @@ export default class RangeSlider extends React.Component {
           value: 5
         }
       }
-
-    handleChangeStart = () => {
-    console.log('Change event started')
-    };
-
+ 
     handleChange = value => {
     this.setState({
         value: value
     })
     };
 
-    handleChangeComplete = () => {
-    console.log('Change event completed')
-    };
-    
     render() {
         const { value } = this.state;
 
@@ -38,7 +27,6 @@ export default class RangeSlider extends React.Component {
             10: 'Extremely'
           }
 
-          
         return (
           <div className='slider'>
             <Slider

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Card, Segment, Header, Button } from 'semantic-ui-react';
+import { Container, Card, Segment, Header, Button, Form } from 'semantic-ui-react';
 import RangeSlider from './RangeSlider';
 
 
@@ -17,6 +17,11 @@ export default class EndorsementCard extends React.Component {
              Listening: "good at listening",
              Reliable: "reliable"
             };
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+      handleSubmit = event => {
+          console.log('submitted');
       }
 
     render() {
@@ -26,11 +31,13 @@ export default class EndorsementCard extends React.Component {
                     <Segment>
                         <div className="flex-container-center">
                             <Header as='h1'>Endorsements</Header>
-                            <p className="endorsement-question">How <strong>{this.state.Listening}</strong> is Harriet?</p>
+                            <p className="endorsement-question">On a scale of 1-10, how <strong>{this.state.Listening}</strong> is Harriet?</p>
                             <RangeSlider/> 
                         </div>
                         <div className="flex-container-right">
-                            <Button basic>Next</Button> 
+                        <Form onSubmit={this.handleSubmit}>
+                            <Button basic type="Submit">Next</Button> 
+                        </Form>
                         </div>
                     </Segment>
                 </Container>
