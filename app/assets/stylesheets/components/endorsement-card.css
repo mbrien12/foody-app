@@ -7,11 +7,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 100px;
+    padding: 80px;
 }
 
 .flex-container-right {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.endorsement-question {
+   padding: 30px;
 }

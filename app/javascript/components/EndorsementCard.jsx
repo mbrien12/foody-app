@@ -12,7 +12,7 @@ export default class EndorsementCard extends React.Component {
                     <Segment>
                         <div className="flex-container-center">
                             <Header as='h1'>Endorsements</Header>
-                            <p>How <strong>reliable</strong> is Harriet?</p>
+                            <p className="endorsement-question">How <strong>reliable</strong> is Harriet?</p>
                             <RangeSlider/> 
                         </div>
                         <div className="flex-container-right">
