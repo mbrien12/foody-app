@@ -16,7 +16,7 @@ export default class RangeSlider extends React.Component {
     handleChange = value => {
     this.setState({
         value: value
-    })
+     })
     };
 
     render() {
@@ -43,3 +43,7 @@ export default class RangeSlider extends React.Component {
         )
       }
 }
+
+RangeSlider.propTypes = {
+  value: PropTypes.number
+};

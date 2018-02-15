@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Card, Segment, Header, Button, Form } from 'semantic-ui-react';
 import RangeSlider from './RangeSlider';
+import CompletedEndorsement from './CompletedEndorsement'
 
 
 export default class EndorsementCard extends React.Component {
@@ -10,7 +11,17 @@ export default class EndorsementCard extends React.Component {
         this.state = {
             behaviour: 'adaptable',
             index: 0,
-            finished: false
+            finished: false,
+            behaviourScore: {
+                adaptable: 0,
+                collaborative: 0,
+                communicative: 0,
+                diplomatic: 0,
+                empathetic: 0,
+                inclusive: 0,
+                listening: 0,
+                reliable: 0
+            }
             };
         this.nextBehaviour = this.nextBehaviour.bind(this);
       }
@@ -26,6 +37,7 @@ export default class EndorsementCard extends React.Component {
      
 
     render() {
+        if (this.state.finished == false) {
         return (
             <div>
                 <Container text className ="card-center">
@@ -33,7 +45,7 @@ export default class EndorsementCard extends React.Component {
                         <div className="flex-container-center">
                             <Header as='h1'>Endorsements</Header>
                             <p className="endorsement-question">On a scale of 1-10, how <strong>{this.state.behaviour}</strong> is Harriet?</p>
-                            <RangeSlider/> 
+                            <RangeSlider value={this.state.value}/> 
                         </div>
                             <div className="flex-container-right">
                                 <Form onSubmit={this.nextBehaviour}>
@@ -43,6 +55,11 @@ export default class EndorsementCard extends React.Component {
                     </Segment>
                 </Container>
             </div>
-        );
+            );
+        } else {
+            return (
+            <CompletedEndorsement/>
+            )
+        }
     }
 }
