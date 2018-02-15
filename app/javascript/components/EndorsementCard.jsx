@@ -8,37 +8,35 @@ export default class EndorsementCard extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-             Adaptable: {},
-             Collaborative: {},
-             Communicative: {},
-             Diplomatic: {},
-             Empathetic: {},
-             Inclusive: {},
-             Listening: {},
-             Reliable: {}
+            behaviour: 'adaptable',
+            index: 0,
+            finished: false
             };
-    
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.nextBehaviour = this.nextBehaviour.bind(this);
       }
 
-      handleSubmit = event => {
-        console.log(behaviour[1]);
+      nextBehaviour(event) {
+        const behaviour = ['collaborative', 'communicative', 'diplomatic', 'empathetic', 'inclusive', 'good at listening', 'reliable'];
+        const finished = this.state.index == behaviour.length;
+        this.setState({behaviour: behaviour[this.state.index], index: this.state.index + 1});
+        if (finished) {
+            this.setState({finished: true});
+        }
       }
+     
 
     render() {
-        const behaviour = ['adaptable', 'collaborative', 'communicative', 'diplomatic', 'empathetic', 'inclusive', 'good at listening', 'reliable'  ]
-    
         return (
             <div>
                 <Container text className ="card-center">
                     <Segment>
                         <div className="flex-container-center">
                             <Header as='h1'>Endorsements</Header>
-                            <p className="endorsement-question">On a scale of 1-10, how <strong>{behaviour[1]}</strong> is Harriet?</p>
+                            <p className="endorsement-question">On a scale of 1-10, how <strong>{this.state.behaviour}</strong> is Harriet?</p>
                             <RangeSlider/> 
                         </div>
                             <div className="flex-container-right">
-                                <Form onSubmit={this.handleSubmit}>
+                                <Form onSubmit={this.nextBehaviour}>
                                     <Button basic type="Submit">Next</Button> 
                                 </Form>
                             </div>
