@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom';
@@ -15,7 +14,8 @@ export default class RangeSlider extends React.Component {
  
     handleChange = value => {
     this.setState({
-        value: value
+        value: value,
+        behaviour: this.props.behaviour
      })
     };
 
@@ -43,7 +43,3 @@ export default class RangeSlider extends React.Component {
         )
       }
 }
-
-RangeSlider.propTypes = {
-  value: PropTypes.number
-};
