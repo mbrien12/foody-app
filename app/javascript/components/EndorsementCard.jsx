@@ -4,7 +4,6 @@ import { Container, Card, Segment, Header, Button, Form } from 'semantic-ui-reac
 import RangeSlider from './RangeSlider';
 import CompletedEndorsement from './CompletedEndorsement'
 
-
 export default class EndorsementCard extends React.Component {
   constructor(props) {
     super(props);
