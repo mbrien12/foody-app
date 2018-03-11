@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-    def endorsement
+    def home
     end
 
 end
