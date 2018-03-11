@@ -15,3 +15,7 @@
  */
 
  @import "components/endorsement-card.css";
+ 
+ body {
+   margin: 0;
+ }
