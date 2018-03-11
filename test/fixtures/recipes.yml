@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  time: MyString
+  serving: 1
+  url: MyString
+  ingredients: MyText
+  methods: MyText
+  type: 
+
+two:
+  name: MyString
+  time: MyString
+  serving: 1
+  url: MyString
+  ingredients: MyText
+  methods: MyText
+  type: 
