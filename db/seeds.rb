@@ -9,7 +9,7 @@ require 'faker'
     ingredients: Faker::Food.ingredient,
     methods: "Mix it all together",
     category: ["breakfast", "lunch", "dinner"].sample,
-    image: "www.image.com"
+    image: "https://picsum.photos/200/300/?random"
   )
 }
 
