@@ -11,7 +11,7 @@ export default class RecipeCards extends React.Component {
           <Card.Group>
           {this.props.recipes.map(function(recipe, i){
               return (
-                <Card key={recipe.id} href='recipes/{recipe.id}' target="_blank">
+                <Card key={recipe.id} href={'/recipes/' + recipe.id} target="_blank">
                 <Image src={recipe.image} />
                 <Card.Content>
                   <Card.Header>
