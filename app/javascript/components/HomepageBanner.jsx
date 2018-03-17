@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import { Button, Divider, Header, Modal } from "semantic-ui-react";
 import RecipeForm from "./RecipeForm";
+import homepageBannerStyles from './css/homepageBanner.css'
 
 export default class HomepageBanner extends React.Component {
   render() {

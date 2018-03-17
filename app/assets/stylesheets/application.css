@@ -13,8 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
- @import "components/endorsement-card.css";
  
  body {
    margin: 0;

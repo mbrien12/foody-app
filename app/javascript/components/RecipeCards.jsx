@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card, Container,Icon, Image } from 'semantic-ui-react';
 
 export default class RecipeCards extends React.Component {
     render() {
+      const recipeTitle = {
+        padding: '30px'
+      }
+
         return (
           <div>
-          <h1>RECIPE CARDS WILL LIVE HERE</h1>
-          <Card.Group>
+          <Container textAlign='center'>
+          <h1 style={recipeTitle}>Recipes</h1>
+          <Card.Group centered>
           {this.props.recipes.map(function(recipe, i){
               return (
                 <Card key={recipe.id} href={'/recipes/' + recipe.id}>
@@ -33,6 +38,7 @@ export default class RecipeCards extends React.Component {
               )
           })}
         </Card.Group>
+        </Container>
           </div>
         );
     }
