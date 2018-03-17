@@ -29,10 +29,8 @@ export default class RecipeCards extends React.Component {
                   </Card.Meta>
                 </Card.Content>
                 <Card.Content extra>
-                  <a>
                     <Icon name='user' />
                     For {recipe.serving} people
-                  </a>
                 </Card.Content>
               </Card>
               )
