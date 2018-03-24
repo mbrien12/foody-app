@@ -4,6 +4,21 @@ import PropTypes from "prop-types";
 import { Button, Form, Header,Segment } from "semantic-ui-react";
 
 export default class RecipeForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {name: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+    console.log(this.state.name);
+  }
+
   render() {
     const options = [
       {key: 'b', text: 'Breakfast', value: 'breakfast'},
@@ -17,14 +32,15 @@ export default class RecipeForm extends React.Component {
     //   fontWeight: 'lighter',
     //   fontSize: '18px'
     // }
-    const { name, time, serving, url, ingredients, instructions, category, image} = this.state
+    this.state = { name: '', time: 0}
+    // const { name, time, serving, url, ingredients, instructions, category, image} = this.state
 
     return (
       <Segment inverted>
       <Header as='h2'>Add recipe</Header>
       <Form inverted>
         <Form.Group widths='equal'>
-          <Form.Input fluid label='Recipe name' name='name' value={name} placeholder='Lasagna' />
+          <Form.Input fluid label='Recipe name' name='name' value={name} onChange={this.handleChange}  placeholder='Lasagna' />
           <Form.Input fluid label='How does it take?' name='time' value={time} placeholder='40 mins' />
           <Form.Input type='number' name='serving' value={serving} label='How many people is it for?' placeholder='4' />
         </Form.Group>

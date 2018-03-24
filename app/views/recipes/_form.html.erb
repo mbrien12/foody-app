@@ -1,3 +1,5 @@
+<%= react_component("RecipeForm") %>
+
 <%= form_with(model: recipe, local: true) do |form| %>
   <% if recipe.errors.any? %>
     <div id="error_explanation">
