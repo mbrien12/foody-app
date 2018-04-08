@@ -5,11 +5,11 @@ import { Button, Form, Header,Segment } from "semantic-ui-react";
 
 export default class RecipeForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
+      test: "hello",
       submitted: false
     };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
